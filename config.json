@@ -1,0 +1,25 @@
+{
+	"kind": "Pod",
+	"apiVersion": "v1",
+	"metadata": {
+		"name": "school-service-app",
+		"labels": {
+			"app": "webapp"
+    		}
+	},
+	"spec": {
+		"containers": [
+			{
+				"name": "school-service",
+				"image": "school-service:latest",
+				"imagePullPolicy": "IfNotPresent",
+				"ports": [
+					{
+						"containerPort": 8080
+					}
+				],
+				"command": ["./main"]
+			}
+		]
+	}
+}
